@@ -1,5 +1,5 @@
 
-const canvasSize = {w: 100, h: 100}
+const canvasSize = {w: 250, h: 250}
 
 const dotCount = 10
 let dots = []
@@ -12,7 +12,7 @@ const getRandomColor = () => {
 
 const createDots = () => {
 	for(let i = 0; i < dotCount; i ++){
-		dots.push({x: Math.random() * 800, y: Math.random() * 600, color: getRandomColor()});
+		dots.push({x: Math.random() * canvasSize.w, y: Math.random() * canvasSize.h, color: getRandomColor()});
 	}
 }
 
@@ -42,6 +42,7 @@ function init() {
 			p[i].push({color: color})
 		}
 	}
+	draw()
 	
 }
 
